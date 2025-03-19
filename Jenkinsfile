@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git branch: 'main', url: 'https://github.com/madhuk54/Project.git'
+                git branch: 'main', url: 'https://github.com/madhuk54/Project.git',credentialsId:"token"
             }
         }
         stage('Compile Java') {
