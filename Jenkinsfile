@@ -8,14 +8,13 @@ pipeline {
         }
         stage('Compile Java') {
             steps {
-                bat 'javac Factorial.java'
+                bat 'javac -d . Factorial.java' // Ensure correct classpath
             }
         }
         stage('Run Java Program') {
             steps {
-                bat 'java Factorial'
+                bat 'java Project.Factorial'  // Change based on package
             }
         }
     }
 }
-
