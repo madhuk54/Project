@@ -12,7 +12,7 @@ pipeline {
         }
         stage('Compile Java') {
             steps {
-                bat 'java Factorial.java'
+                bat 'javac Factorial.java'
             }
         }
         stage('Run Java Program') {
