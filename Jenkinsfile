@@ -12,7 +12,7 @@ pipeline {
         }
         stage('Compile Java') {
             steps {
-                bat 'javac FactorialGenerator.java'
+                bat 'java Factorial.java'
             }
         }
         stage('Run Java Program') {
@@ -20,7 +20,7 @@ pipeline {
                 input message: 'Enter a number (N) for factorial generation:', parameters: [
                     string(name: 'NUMBER', defaultValue: '5', description: 'Enter a positive integer')
                 ]
-                bat "echo ${NUMBER} | java FactorialGenerator"
+                bat "echo ${NUMBER} | java Factorial"
             }
         }
     }
