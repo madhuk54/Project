@@ -1,3 +1,5 @@
+package Project;
+
 public class Factorial {
     public static void main(String[] args) {
         if (args.length == 0) {
@@ -5,7 +7,7 @@ public class Factorial {
             return;
         }
         
-        int n = Integer.parseInt(args[0]); // Get input from command line
+        int n = Integer.parseInt(args[0]); // Read input from command-line args
         int fact = 1;
         
         for (int i = 1; i <= n; i++) {
