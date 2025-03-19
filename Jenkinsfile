@@ -17,9 +17,6 @@ pipeline {
         }
         stage('Run Java Program') {
             steps {
-                input message: 'Enter a number (N) for factorial generation:', parameters: [
-                    string(name: 'NUMBER', defaultValue: '5', description: 'Enter a positive integer')
-                ]
                 bat "echo ${NUMBER} | java Factorial"
             }
         }
